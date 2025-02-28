@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Define default (light) theme variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #ffffff;
+    --content-bg: #f7f7f7;
+    --footer-bg: #f1f1f1;
+    --card-bg: #ffffff;
+    --card-text: #000000;
+    --card-price: #2563eb;
+  }
+  
+  /* Dark theme variables */
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #1f1f1f;
+    --content-bg: #181818;
+    --footer-bg: #1f1f1f;
+    --card-bg: #1e1e1e;
+    --card-text: #ffffff;
+    --card-price: #90cdf4;
+  }
+  
+  /* Global styles */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Wrapper to ensure full height */
+  .app-wrapper {
+    min-height: 100vh;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: var(--header-bg) !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Content styling */
+  .content {
+    background-color: var(--content-bg);
+    color: var(--text-color);
+    min-height: calc(100vh - 128px); /* adjust based on header/footer height */
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+  }
+  
+  /* Optional: Override some antd Card styles using our CSS variables */
+  .product-card .ant-card-body {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+  }
+  
